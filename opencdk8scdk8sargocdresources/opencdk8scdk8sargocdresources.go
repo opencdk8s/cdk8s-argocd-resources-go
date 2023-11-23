@@ -330,6 +330,8 @@ type ArgoCdApplicationSpec struct {
 	// Experimental.
 	Destination *ApplicationDestination `json:"destination"`
 	// Experimental.
+	IgnoreDifferences *[]*ResourceIgnoreDifferences `json:"ignoreDifferences"`
+	// Experimental.
 	Project *string `json:"project"`
 	// Experimental.
 	Source *ApplicationSource `json:"source"`
@@ -631,6 +633,24 @@ type ProjectRoles struct {
 	Name *string `json:"name"`
 	// Experimental.
 	Policies *[]*string `json:"policies"`
+}
+
+// Experimental.
+type ResourceIgnoreDifferences struct {
+	// Experimental.
+	Group *string `json:"group"`
+	// Experimental.
+	JqPathExpressions *[]*string `json:"jqPathExpressions"`
+	// Experimental.
+	JsonPointers *[]*string `json:"jsonPointers"`
+	// Experimental.
+	Kind *string `json:"kind"`
+	// Experimental.
+	Name *string `json:"name"`
+	// Experimental.
+	Namespace *string `json:"namespace"`
+	// Experimental.
+	Server *string `json:"server"`
 }
 
 // Experimental.

@@ -92,6 +92,10 @@ func init() {
 		reflect.TypeOf((*ProjectRoles)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@opencdk8s/cdk8s-argocd-resources.ResourceIgnoreDifferences",
+		reflect.TypeOf((*ResourceIgnoreDifferences)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@opencdk8s/cdk8s-argocd-resources.ResourceRef",
 		reflect.TypeOf((*ResourceRef)(nil)).Elem(),
 	)
