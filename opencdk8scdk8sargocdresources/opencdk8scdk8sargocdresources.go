@@ -40,6 +40,8 @@ type ApplicationSource struct {
 	// Experimental.
 	Directory *ApplicationDirectory `json:"directory"`
 	// Experimental.
+	Helm *HelmOptions `json:"helm"`
+	// Experimental.
 	Path *string `json:"path"`
 	// Experimental.
 	Plugin *ApplicationPlugin `json:"plugin"`
@@ -621,6 +623,64 @@ type ArgoCdProjectSpec struct {
 	Roles *[]*ProjectRoles `json:"roles"`
 	// Experimental.
 	SourceRepos *[]*string `json:"sourceRepos"`
+}
+
+// Experimental.
+type HelmOptions struct {
+	// Experimental.
+	Chart *string `json:"chart"`
+	// Experimental.
+	Force *bool `json:"force"`
+	// Experimental.
+	HelmOptions *[]*string `json:"helmOptions"`
+	// Experimental.
+	HelmVersion *string `json:"helmVersion"`
+	// Experimental.
+	Install *bool `json:"install"`
+	// Experimental.
+	Lint *bool `json:"lint"`
+	// Experimental.
+	ReleaseName *string `json:"releaseName"`
+	// Experimental.
+	Repo *string `json:"repo"`
+	// Experimental.
+	TargetRevision *string `json:"targetRevision"`
+	// Experimental.
+	Timeout *string `json:"timeout"`
+	// Experimental.
+	Upgrade *bool `json:"upgrade"`
+	// Experimental.
+	ValueFiles *[]*string `json:"valueFiles"`
+	// Experimental.
+	Values *map[string]*string `json:"values"`
+	// Experimental.
+	ValuesFrom *[]*HelmValuesFromSource `json:"valuesFrom"`
+	// Experimental.
+	Verify *bool `json:"verify"`
+	// Experimental.
+	Version *string `json:"version"`
+	// Experimental.
+	Wait *bool `json:"wait"`
+}
+
+// Experimental.
+type HelmValuesFromSource struct {
+	// Experimental.
+	Group *string `json:"group"`
+	// Experimental.
+	JqPathExpressions *[]*string `json:"jqPathExpressions"`
+	// Experimental.
+	JsonPointers *[]*string `json:"jsonPointers"`
+	// Experimental.
+	Kind *string `json:"kind"`
+	// Experimental.
+	Name *string `json:"name"`
+	// Experimental.
+	Namespace *string `json:"namespace"`
+	// Experimental.
+	Values *map[string]*string `json:"values"`
+	// Experimental.
+	Version *string `json:"version"`
 }
 
 // Experimental.

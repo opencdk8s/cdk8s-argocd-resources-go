@@ -88,6 +88,14 @@ func init() {
 		reflect.TypeOf((*ArgoCdProjectSpec)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"@opencdk8s/cdk8s-argocd-resources.HelmOptions",
+		reflect.TypeOf((*HelmOptions)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@opencdk8s/cdk8s-argocd-resources.HelmValuesFromSource",
+		reflect.TypeOf((*HelmValuesFromSource)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"@opencdk8s/cdk8s-argocd-resources.ProjectRoles",
 		reflect.TypeOf((*ProjectRoles)(nil)).Elem(),
 	)
