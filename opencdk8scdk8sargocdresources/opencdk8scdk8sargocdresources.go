@@ -38,6 +38,8 @@ type ApplicationPlugin struct {
 // Experimental.
 type ApplicationSource struct {
 	// Experimental.
+	Chart *string `json:"chart"`
+	// Experimental.
 	Directory *ApplicationDirectory `json:"directory"`
 	// Experimental.
 	Helm *HelmOptions `json:"helm"`
@@ -45,6 +47,8 @@ type ApplicationSource struct {
 	Path *string `json:"path"`
 	// Experimental.
 	Plugin *ApplicationPlugin `json:"plugin"`
+	// Experimental.
+	Ref *string `json:"ref"`
 	// Experimental.
 	RepoURL *string `json:"repoURL"`
 	// Experimental.
@@ -338,6 +342,8 @@ type ArgoCdApplicationSpec struct {
 	// Experimental.
 	Source *ApplicationSource `json:"source"`
 	// Experimental.
+	Sources *[]*ApplicationSource `json:"sources"`
+	// Experimental.
 	SyncPolicy *ApplicationSyncPolicy `json:"syncPolicy"`
 }
 
@@ -627,8 +633,6 @@ type ArgoCdProjectSpec struct {
 
 // Experimental.
 type HelmOptions struct {
-	// Experimental.
-	Chart *string `json:"chart"`
 	// Experimental.
 	Force *bool `json:"force"`
 	// Experimental.
